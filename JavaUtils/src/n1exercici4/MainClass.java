@@ -1,4 +1,4 @@
-package n1exercici3;
+package n1exercici4;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,6 +27,7 @@ public class MainClass {
 			e.printStackTrace();
 		}
 		
+		directoryTree.directoryTxtReader(txt);
 		
 	}
 

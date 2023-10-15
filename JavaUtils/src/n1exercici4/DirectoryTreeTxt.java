@@ -1,4 +1,4 @@
-package n1exercici3;
+package n1exercici4;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -46,4 +46,21 @@ public class DirectoryTreeTxt {
 		
 	}
 	
+	public void directoryTxtReader(String txt) {
+		
+		 try {
+             Scanner scanner = new Scanner(new File(txt));
+
+             while (scanner.hasNextLine()) {
+                 String linea = scanner.nextLine();
+                 System.out.println(linea);
+             }
+
+             
+         } catch (FileNotFoundException e) {
+         	e.printStackTrace();
+         }
+		
+	}
+
 }
