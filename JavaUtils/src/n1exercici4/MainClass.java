@@ -15,19 +15,19 @@ public class MainClass {
 		String directory = "C:\\Amazon Games\\Library\\Blasphemous";
 		File directoryContent = new File(directory);
 		String txt = "C:\\Users\\Gerard\\Desktop\\countries\\directori.txt";
-		DirectoryTreeTxt directoryTree = new DirectoryTreeTxt();
+		
 		
 		try {
 		FileWriter writer = new FileWriter(txt);
-		
-		directoryTree.directoryTxtWriter(directoryContent, 0, writer);
+		DirectoryTreeTxt directoryTree = new DirectoryTreeTxt(directoryContent, 0, writer, txt);
+		directoryTree.directoryTxtWriter();
 		System.out.println("abre directori afegit a 'directori.txt'\n");
-		
+		directoryTree.directoryTxtReader();
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
 		
-		directoryTree.directoryTxtReader(txt);
+		
 		
 	}
 

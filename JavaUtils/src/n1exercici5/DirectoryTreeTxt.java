@@ -1,14 +1,15 @@
-package n1exercici4;
+package n1exercici5;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class DirectoryTreeTxt {
+public class DirectoryTreeTxt implements Serializable {
 	
 	private File directoryContent;
 	private int j;
@@ -25,8 +26,6 @@ public class DirectoryTreeTxt {
 		this.txt = txt;
 
 	}
-	
-	
 	
 
 	public File getDirectoryContent() {
@@ -70,7 +69,6 @@ public class DirectoryTreeTxt {
 		this.txt = txt;
 	}
 	
-
 
 
 
