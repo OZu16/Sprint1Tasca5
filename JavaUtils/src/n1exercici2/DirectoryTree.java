@@ -8,13 +8,11 @@ public class DirectoryTree {
 	
 
 
-	public static void sortDirectory(File a, int j) {
+	public void sortDirectory(File directoryContent, int j) {
 		
 		try {
 			
-			
-	
-		File[] files = a.listFiles();
+		File[] files = directoryContent.listFiles();
 		
 		Arrays.sort(files);
 		

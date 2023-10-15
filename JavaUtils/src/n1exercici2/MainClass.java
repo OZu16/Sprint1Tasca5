@@ -9,13 +9,17 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		String directory = "C:\\Amazon Games\\Library\\Blasphemous";
+		String directory1 = "C:\\Amazon Games\\Library\\aaaa";
+		File directoryContent1 = new File(directory1);
+		String directory2 = "C:\\Amazon Games\\Library\\Blasphemous";
+		File directoryContent2 = new File(directory2);
 		
-		File directoryContent = new File(directory);
 		DirectoryTree directoryTree1 = new DirectoryTree();
+		DirectoryTree directoryTree2 = new DirectoryTree();
 		
-		directoryTree1.sortDirectory(directoryContent, 0);
-		
+		directoryTree1.sortDirectory(directoryContent1, 0);
+		directoryTree2.sortDirectory(directoryContent2, 0);
+
 	}
 
 }
