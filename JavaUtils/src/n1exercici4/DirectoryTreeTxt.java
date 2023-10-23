@@ -18,7 +18,6 @@ public class DirectoryTreeTxt {
 	
 	
 	public DirectoryTreeTxt(File directoryContent, int j, FileWriter writer, String txt) {
-		super();
 		this.directoryContent = directoryContent;
 		this.j = j;
 		this.writer = writer;

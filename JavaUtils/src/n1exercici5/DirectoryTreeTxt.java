@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class DirectoryTreeTxt implements Serializable {
+public class DirectoryTreeTxt {
 	
 	
 	private File directoryContent;
@@ -20,14 +20,9 @@ public class DirectoryTreeTxt implements Serializable {
 	
 	
 	public DirectoryTreeTxt(File directoryContent, int j, FileWriter writer, String txt) {
-		super();
 		this.directoryContent = directoryContent;
 		this.j = j;
-		  try {
-	            this.writer = new FileWriter("C:\\Users\\Gerard\\Desktop\\countries\\directori.txt");
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
+	    this.writer = writer;
 		this.txt = txt;
 
 	}

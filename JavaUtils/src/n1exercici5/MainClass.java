@@ -25,31 +25,30 @@ public class MainClass {
 		try {
 		FileWriter writer = new FileWriter(txt);
 		DirectoryTreeTxt directoryTree = new DirectoryTreeTxt(directoryContent, 0, writer, txt);
-		/*directoryTree.directoryTxtWriter();
+		directoryTree.directoryTxtWriter();
 		System.out.println("abre directori afegit a 'directori.txt'\n");
-		directoryTree.directoryTxtReader();*/
-			
-			try {
-				ObjectOutputStream writeFileSer = new ObjectOutputStream(new FileOutputStream("C:\\Users\\Gerard\\Desktop\\countries\\directoriotree.ser"));
-				writeFileSer.writeObject(directoryTree);
-				writeFileSer.close();
-				
-				ObjectInputStream readFileSer = new ObjectInputStream(new FileInputStream("C:\\Users\\Gerard\\Desktop\\countries\\directoriotree.ser"));
-				DirectoryTreeTxt directoryTreeSer = (DirectoryTreeTxt)readFileSer.readObject();
-				readFileSer.close();
-				
-				directoryTreeSer.directoryTxtWriter();
-				System.out.println("abre directori afegit a 'directori.txt'\n");
-				directoryTreeSer.directoryTxtReader();
-				
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
+		directoryTree.directoryTxtReader();
 		
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
 		
+		try {
+			SerializablePerson person1 = new SerializablePerson("Paco", "Pepe", 50, "21782368Z");
+			ObjectOutputStream writeFileSer = new ObjectOutputStream(new FileOutputStream("C:\\Users\\Gerard\\Desktop\\countries\\person.ser"));
+			writeFileSer.writeObject(person1);
+			writeFileSer.close();
+			
+			ObjectInputStream readFileSer = new ObjectInputStream(new FileInputStream("C:\\Users\\Gerard\\Desktop\\countries\\person.ser"));
+			SerializablePerson person1Ser = (SerializablePerson)readFileSer.readObject();
+			readFileSer.close();
+			
+			
+			System.out.println("\n " + person1Ser.toString());
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 	
 	}
