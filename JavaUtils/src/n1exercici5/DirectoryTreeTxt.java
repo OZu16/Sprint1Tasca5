@@ -11,9 +11,10 @@ import java.util.Scanner;
 
 public class DirectoryTreeTxt implements Serializable {
 	
+	
 	private File directoryContent;
 	private int j;
-	private FileWriter writer;
+	private transient FileWriter writer;
 	private String txt;
 
 	
@@ -22,7 +23,11 @@ public class DirectoryTreeTxt implements Serializable {
 		super();
 		this.directoryContent = directoryContent;
 		this.j = j;
-		this.writer = writer;
+		  try {
+	            this.writer = new FileWriter("C:\\Users\\Gerard\\Desktop\\countries\\directori.txt");
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
 		this.txt = txt;
 
 	}
@@ -48,8 +53,6 @@ public class DirectoryTreeTxt implements Serializable {
 	}
 
 
-
-
 	public FileWriter getWriter() {
 		return writer;
 	}
@@ -72,7 +75,7 @@ public class DirectoryTreeTxt implements Serializable {
 
 
 
-	public void directoryTxtWriter() {
+	public void directoryTxtWriter() throws IOException{
 		
 		try {
 			
