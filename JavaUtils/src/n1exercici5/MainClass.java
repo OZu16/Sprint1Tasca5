@@ -17,9 +17,9 @@ public class MainClass {
 	public static void main(String[] args) {
 		
 		
-		String directory = "C:\\Amazon Games\\Library\\Blasphemous";
+		String directory = new File("").getAbsolutePath();
 		File directoryContent = new File(directory);
-		String txt = "C:\\Users\\Gerard\\Desktop\\countries\\directori.txt";
+		String txt = new File(".\\src\\directory.txt").getAbsolutePath();
 		
 		
 		try {
@@ -35,11 +35,12 @@ public class MainClass {
 		
 		try {
 			SerializablePerson person1 = new SerializablePerson("Paco", "Pepe", 50, "21782368Z");
-			ObjectOutputStream writeFileSer = new ObjectOutputStream(new FileOutputStream("C:\\Users\\Gerard\\Desktop\\countries\\person.ser"));
+			String path = new File(".\\src\\person.ser").getAbsolutePath();
+			ObjectOutputStream writeFileSer = new ObjectOutputStream(new FileOutputStream(path));
 			writeFileSer.writeObject(person1);
 			writeFileSer.close();
 			
-			ObjectInputStream readFileSer = new ObjectInputStream(new FileInputStream("C:\\Users\\Gerard\\Desktop\\countries\\person.ser"));
+			ObjectInputStream readFileSer = new ObjectInputStream(new FileInputStream(path));
 			SerializablePerson person1Ser = (SerializablePerson)readFileSer.readObject();
 			readFileSer.close();
 			

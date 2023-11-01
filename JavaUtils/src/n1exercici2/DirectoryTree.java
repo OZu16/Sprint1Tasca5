@@ -11,7 +11,7 @@ public class DirectoryTree {
 	public void sortDirectory(File directoryContent, int j) {
 		
 		try {
-			
+					
 		File[] files = directoryContent.listFiles();
 		
 		Arrays.sort(files);

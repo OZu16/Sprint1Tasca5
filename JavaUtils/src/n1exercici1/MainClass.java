@@ -10,8 +10,9 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		Directory directory1 = new Directory("C:\\");
-		Directory directory2 = new Directory("C:\\Amazon Games\\Library\\Blasphemous");
+		String path = new File(".\\src\\").getAbsolutePath();
+		
+		Directory directory1 = new Directory(path);
 		
 		directory1.sortDirectory();
 		

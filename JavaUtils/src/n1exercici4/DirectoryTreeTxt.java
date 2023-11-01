@@ -102,6 +102,8 @@ public class DirectoryTreeTxt {
             	setDirectoryContent(file);
             	setJ(getJ() + 1);
                 directoryTxtWriter();
+            }else {
+            	setJ(0);
             }
             
 		}

@@ -8,15 +8,14 @@ public class Directory {
 	private String directory = "";
 
 	public Directory(String directory) {
-		super();
 		this.directory = directory;
 	}
 	
 	public void sortDirectory() {
 		
 		try {
-		File directoryContent = new File(this.directory);
-		File[] files = directoryContent.listFiles();
+		File directoryContentFile = new File(this.directory);
+		File[] files = directoryContentFile.listFiles();
 		
 		Arrays.sort(files);
 		

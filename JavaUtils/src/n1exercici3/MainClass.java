@@ -11,10 +11,10 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		
-		String directory = "C:\\Amazon Games\\Library\\Blasphemous";
+		String directory = new File("").getAbsolutePath();
 		File directoryContent = new File(directory);
-		String txt = "C:\\Users\\Gerard\\Desktop\\countries\\directori.txt";
+		
+		String txt = new File(".\\src\\directory.txt").getAbsolutePath();
 		DirectoryTreeTxt directoryTree = new DirectoryTreeTxt();
 		
 		try {
